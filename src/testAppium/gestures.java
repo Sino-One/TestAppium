@@ -49,7 +49,7 @@ public class gestures extends base {
 		sequence.addAction(new Pause(finger, Duration.ofMillis(1000)));
 		sequence.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
 		
-		sequence.addAction(finger.createPointerMove(Duration.ofMillis(0), Origin.viewport(), element.getLocation().x, element.getLocation().y));
+		/*sequence.addAction(finger.createPointerMove(Duration.ofMillis(0), Origin.viewport(), element.getLocation().x, element.getLocation().y));
 		sequence.addAction(finger.createPointerDown(PointerInput.MouseButton.MIDDLE.asArg()));
 		sequence.addAction(finger.createPointerUp(PointerInput.MouseButton.MIDDLE.asArg()));
 		
@@ -62,7 +62,7 @@ public class gestures extends base {
 		
 		sequence.addAction(finger.createPointerMove(Duration.ofMillis(0), Origin.viewport(), element.getLocation().x, element.getLocation().y));
 		sequence.addAction(finger.createPointerDown(PointerInput.MouseButton.RIGHT.asArg()));
-		sequence.addAction(finger.createPointerUp(PointerInput.MouseButton.RIGHT.asArg()));
+		sequence.addAction(finger.createPointerUp(PointerInput.MouseButton.RIGHT.asArg()));*/
 
 
 		driver.perform(Arrays.asList(sequence));
