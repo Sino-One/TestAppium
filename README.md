@@ -44,7 +44,7 @@
 			- Deux manière de faire pour download les dependencies dont on a besoin :
 				1- Ouvrir le pom.xml : clic gauche -> open with -> generic text editor 
 				2- Sous le </build>, ajouter <dependencies></dependencies>
-				3- Ajouter le tag <dependency> référencé sur la page de maven Repo
+				3- Ajouter le tag <dependency> référencé sur la page de maven Repo dans le tag <dependencies> précedemment crée
 					Ex : 
 							<!-- https://mvnrepository.com/artifact/io.appium/java-client -->
 								<dependency>
