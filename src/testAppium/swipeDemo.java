@@ -25,18 +25,11 @@ public class swipeDemo extends base {
 		driver.findElement(AppiumBy.androidUIAutomator("text(\"2. Inline\")")).click();
 		WebElement element = driver.findElement(By.xpath("//*[@content-desc='9']"));
 		element.click();
+				
+		WebElement a = driver.findElement(By.xpath("//*[@content-desc='15']"));
+		WebElement b = driver.findElement(By.xpath("//*[@content-desc='45']"));
 		
-		PointerInput finger = new PointerInput(Kind.TOUCH, "finger");
-		Sequence sequence = new Sequence(finger, 0);
-		
-		element = driver.findElement(By.xpath("//*[@content-desc='15']"));
-		
-		sequence.addAction(finger.createPointerMove(Duration.ofMillis(0), Origin.viewport(), element.getLocation().x, element.getLocation().y));
-		sequence.addAction(finger.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
-		
-		element = driver.findElement(By.xpath("//*[@content-desc='45']"));
-		sequence.addAction(finger.createPointerMove(Duration.ofMillis(1000), Origin.viewport(), element.getLocation().x, element.getLocation().y));
-		sequence.addAction(finger.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+		Sequence sequence = swipe(a.getLocation(), b.getLocation(), Duration.ofMillis(1000));
 		
 		driver.perform(Arrays.asList(sequence));
 
